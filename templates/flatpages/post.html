@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+{% extends 'flatpages/default.html' %}
+{% load filter %}
+{% load custom_tags %}
+<html lang="en">
+{% block content %}
+<body>
+
+    <table class="table-bordered" style="border: #0c63e4 ; background-color: #fff3cd" >
+        <tr><td><h6>Username автора публикации</h6></td>
+            <td>{{ post.author.user.username }}</td>
+        </tr>
+    
+        <tr><td><h6>Заголовок поста</h6></td>        
+            <td>{{ post.title |censor:'секс'|censor:'Секс'}}</td>
+        </tr>
+    
+        <tr><td><h6>Дата публикации</h6></td>
+        <td>{{post.create_time|date:'d.m.Y'}}</td>
+        </tr>
+        
+        <tr><td><h6>Содежание поста</h6></td>
+        <td>{{ post.content|censor:'секс'|censor:'Секс'}}</td>
+        </tr>
+        
+        <tr><td><h6>Рейтинг поста</h6></td>
+        <td>{{ post.raiting}}</td>
+        </tr>
+
+    </table>
+    <table class="table-bordered" style="table-border-color-dark: #b02a37; text-align: center" align="center">
+        <tr><td><h6>Автор комментария</h6></td><td><h6>Текст коммента</h6></td></tr>
+        {% for i in comm %}
+            <tr>
+        <td>        {{ i.user.username }}    </td>
+            <td>        {{ i.comment_text }}    </td>
+            </tr>
+    {% endfor %}
+    </table>
+
+</body>
+{% endblock content %}
+</html>

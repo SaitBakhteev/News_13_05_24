@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% extends 'flatpages/default.html' %}
+    {% load custom_tags %}
+    {% load crispy_forms_tags %}
+    <meta charset="UTF-8">
+    {% block title %}
+    <title>Test</title>
+    {% endblock title    %}
+</head>
+
+
+<body>
+{% block content %}    
+    <form action="" method="post">
+    {% csrf_token %}        
+        {{ form  | crispy}}     
+    <input type="submit" value="Сохранить" />
+    
+    </form>
+{% endblock content %}
+</body>
+
+</html>
