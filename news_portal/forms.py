@@ -1,21 +1,29 @@
-from django import forms
-from .models import Post, Author
-from django.core.exceptions import ValidationError
+import datetime
 
+from django import forms
+from .models import Post, Author, Category
+from django.core.exceptions import ValidationError
+from datetime import datetime
 
 class PostForm(forms.Form):
-    title_x = forms.CharField(label='Заголовок публикации', max_length=50)
-    content_x= forms.CharField(label='Содержание публикации', widget=forms.Textarea)
-    author_x=forms.ModelChoiceField(label='Автор', queryset=Author.objects.all())
+    author = forms.ModelChoiceField(label='Автор', queryset=Author.objects.all(), required=False)
+    postType=forms.ChoiceField(label='Тип публикации',choices=Post.post_type)
+    create_time = forms.DateTimeField (disabled=True, label='Дата создания публикации')
+    # category=forms.SelectMultiple(choices=Category.objects.all())
+    title = forms.CharField(label='Заголовок публикации', max_length=50)
+    content= forms.CharField(label='Содержание публикации', widget=forms.Textarea)
 
 
-    class Meta:
-        model = Post
-        fields=['author','title','content','postType']
-
-    def clean(self):
-        clean_post = super().clean()
-        title = clean_post.get('title')
+    def clean(self): # проверка не слишком ли короткое название
+        check=super().clean()
+        title=check.get('title')
         if len(title)<5:
-            raise ValidationError({'title':'Нельзя писать плохиев слова'})
-        return clean_post
+            raise ValidationError({'title':'Слишком короткое название.'})
+        return check
+
+    def get_context(self):
+        context=super().get_context()
+        return context
+
+    # def definition_fields(self, post:Post):
+

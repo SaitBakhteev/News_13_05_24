@@ -9,6 +9,10 @@ register=django.template.Library()
 def current_date(value):
     return datetime.strptime(value, "%d.%M.%Y")
 
+@register.simple_tag()
+def y(val):
+    return f'{val} type {type(val)}'
+
 @register.simple_tag(takes_context=True)
 def url_replace(context, **kwargs):
    pprint(f'tag_context={context}\nkwargs={kwargs}')

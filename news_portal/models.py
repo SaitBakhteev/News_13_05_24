@@ -5,7 +5,6 @@ from django.core.validators import MinValueValidator
 from django.contrib.auth.models import User
 from datetime import datetime
 
-
 class Author(models.Model):
     user=models.OneToOneField(User, on_delete=models.CASCADE)
     raiting=models.IntegerField(default=0)
@@ -38,14 +37,11 @@ class Author(models.Model):
         self.raiting=post_raiting+comm_raiting+comm_posts_raiting
         self.save()
 
-
-
 class Category(models.Model):
     category=models.CharField(max_length=100, unique=True) # тематика поста
 
-
-
-
+    def __str__(self):
+        return self.category
 class Post(models.Model):
     news = 'NS'
     article = 'AL'
@@ -63,13 +59,12 @@ class Post(models.Model):
     def __str__(self):
         return f'{self.content[:30:]}, {self.author.user.username} '
 
-    def set_date(self, y_,m_,d_): # функция изменения даты публикации в БД
+    def set_date(self, y_): # функция изменения даты публикации в БД
                             # через shell сугубо для учеьных целей
         h, m, s =rint(0,24),rint(0,59),rint(0,59)
+        m_,d_=rint(1,12), rint(1,28)
         self.create_time=datetime(y_,m_,d_,h,m,s)
         self.save()
-
-
 
     # Увеличение и уменьшение рейтинга поста
     def like(self):
@@ -89,6 +84,8 @@ class PostCategory(models.Model):
     post=models.ForeignKey(Post, on_delete=models.CASCADE)
     category=models.ForeignKey(Category, on_delete=models.CASCADE)
 
+    def __str__(self):
+        return self.category.category
 
 class Comment(models.Model):
     post=models.ForeignKey(Post, on_delete=models.CASCADE)

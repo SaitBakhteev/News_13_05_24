@@ -60,6 +60,7 @@
                 <td width="800">{{ i.title |censor:'секс'|censor:'Секс'}}</td>
                 <td>{{i.create_time | date:'d.m.Y H:i:s' }}</td>
                 <td>{{ i.content|truncatechars:20 |censor:'секс'|censor:'Секс'}}</td>
+                <td><a href="{{ i.pk }}">открыть статью</a> </td>
             </tr>
             
         {% endfor %}

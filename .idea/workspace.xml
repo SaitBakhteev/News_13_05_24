@@ -5,12 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="309f2f09-8c12-4134-97b7-c23d249271fa" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/templates/flatpages/update_post.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3_1.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3_1.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/news_portal/filters.py" beforeDir="false" afterPath="$PROJECT_DIR$/news_portal/filters.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/news_portal/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/news_portal/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/news_portal/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/news_portal/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/news_portal/templatetags/custom_tags.py" beforeDir="false" afterPath="$PROJECT_DIR$/news_portal/templatetags/custom_tags.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/news_portal/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/news_portal/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/news_portal/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/news_portal/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/flatpages/search.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/flatpages/search.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/flatpages/comm.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/flatpages/comm.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/flatpages/create_post.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/flatpages/create_post.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/flatpages/news.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/flatpages/news.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,6 +42,9 @@
   &quot;associatedIndex&quot;: 3
 }</component>
   <component name="ProjectId" id="2e8yOY1JmODWP6Kz8ncYhholuHr" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -49,7 +58,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;django.template.preview.state&quot;: &quot;SHOW_EDITOR&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Pyth_learn/Projects/django_News_project_D7&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Pyth_learn/Projects/django_News_project_D7/templates/flatpages&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -59,6 +68,11 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Pyth_learn\Projects\django_News_project_D7\templates\flatpages" />
+    </key>
+  </component>
   <component name="RunManager" selected="Python.test">
     <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="django_News_project_D7" />
@@ -150,7 +164,18 @@
       <workItem from="1715360752978" duration="3438000" />
       <workItem from="1715426876107" duration="351000" />
       <workItem from="1715531833298" duration="1579000" />
-      <workItem from="1715586654275" duration="6831000" />
+      <workItem from="1715586654275" duration="8337000" />
+      <workItem from="1716706300209" duration="5025000" />
+      <workItem from="1716791705786" duration="3777000" />
+      <workItem from="1716987547092" duration="1231000" />
+      <workItem from="1717872760867" duration="4557000" />
+      <workItem from="1717918349087" duration="21296000" />
+      <workItem from="1718026793159" duration="11414000" />
+      <workItem from="1718188398329" duration="8133000" />
+      <workItem from="1718202168556" duration="1987000" />
+      <workItem from="1718270101244" duration="3337000" />
+      <workItem from="1718459584466" duration="2419000" />
+      <workItem from="1718528395241" duration="7254000" />
     </task>
     <servers />
   </component>
